@@ -44,6 +44,6 @@ jobs:
 
       - name: Deploy inside EC2
         run: |
-          cd /var/www/html/github-cicd
+          cd github-cicd
           git pull origin develop
           docker compose up -d
