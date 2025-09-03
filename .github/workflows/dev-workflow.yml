@@ -44,6 +44,6 @@ jobs:
 
       - name: Deploy inside EC2
         run: |
-          cd github-cicd
+          cd /home/tabtabglobal/github-cicd
           git pull origin develop
           docker compose up -d
