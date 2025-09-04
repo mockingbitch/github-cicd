@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  laravel-tests:
+  build:
     runs-on: self-hosted
     steps:
       - name: Checkout source
@@ -35,7 +35,7 @@ jobs:
 #        run: php artisan test
 
   deploy:
-    needs: laravel-tests
+    needs: build
     runs-on: self-hosted
     if: github.ref == 'refs/heads/develop'
     steps:
